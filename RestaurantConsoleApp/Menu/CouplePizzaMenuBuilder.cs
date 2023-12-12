@@ -11,14 +11,14 @@ public class CouplePizzaMenuBuilder : IMenuBuilder
     private readonly PizzaType _pizza;
     private readonly DrinkName _drink1;
     private readonly DrinkName _drink2;
-    private IEnumerable<IProduct> _menu = Enumerable.Empty<IProduct>();
+    private IEnumerable<IProduct> _menu;
 
     public CouplePizzaMenuBuilder(PizzaType pizza, DrinkName drink1, DrinkName drink2)
     {
         _pizza = pizza;
         _drink1 = drink1;
         _drink2 = drink2;
-        Reset();
+        _menu = Enumerable.Empty<IProduct>();
     }
 
     public void AddFood()
@@ -32,15 +32,10 @@ public class CouplePizzaMenuBuilder : IMenuBuilder
         _menu = _menu.Append(new TappedDrink(_drink2, DrinkSize.Medium));
     }
 
-    public void Reset()
-    {
-        _menu = Enumerable.Empty<IProduct>();
-    }
-
     public IEnumerable<IProduct> GetMenu()
     {
         var results = _menu;
-        Reset();
+        _menu = Enumerable.Empty<IProduct>();
 
         return results;
     }

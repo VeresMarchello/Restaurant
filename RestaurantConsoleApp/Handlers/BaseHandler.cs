@@ -2,7 +2,7 @@ using RestaurantConsoleApp.Models.Orders;
 
 namespace RestaurantConsoleApp.Handlers;
 
-public class AbstractHandler: IHandler
+public class BaseHandler: IHandler
 {
     private IHandler? _nextHandler;
 

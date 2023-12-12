@@ -2,7 +2,7 @@ using RestaurantConsoleApp.Models.Orders;
 
 namespace RestaurantConsoleApp.Handlers;
 
-public class MinimumOrderHandler: AbstractHandler
+public class MinimumOrderHandler: BaseHandler
 {
     public override IOrder? Handle(IOrder request)
     {

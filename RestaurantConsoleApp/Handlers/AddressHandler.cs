@@ -2,7 +2,7 @@ using RestaurantConsoleApp.Models.Orders;
 
 namespace RestaurantConsoleApp.Handlers;
 
-public class AddressHandler : AbstractHandler
+public class AddressHandler : BaseHandler
 {
     public override IOrder? Handle(IOrder request)
     {

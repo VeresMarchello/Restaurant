@@ -7,5 +7,4 @@ public interface IMenuBuilder
     void AddFood();
     void AddDrink();
     IEnumerable<IProduct> GetMenu();
-    void Reset();
 }
